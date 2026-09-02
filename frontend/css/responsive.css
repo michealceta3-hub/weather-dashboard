@@ -1,0 +1,187 @@
+/* ==================== Mobile (< 768px) ==================== */
+@media (max-width: 767px) {
+    .header-container {
+        flex-wrap: wrap;
+    }
+    
+    .header-left {
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .header-center {
+        width: 100%;
+        order: 3;
+        margin-top: 0.5rem;
+    }
+    
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .main-content {
+        padding: 1rem 0.5rem;
+    }
+    
+    .weather-body {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .weather-main {
+        flex-direction: column;
+    }
+    
+    .temp-value {
+        font-size: 2.5rem;
+    }
+    
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .detail-item {
+        padding: 0.75rem;
+    }
+    
+    .detail-item i {
+        font-size: 1.2rem;
+    }
+    
+    .detail-item span {
+        font-size: 0.75rem;
+    }
+    
+    .rise-set-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-section {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .forecast-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .forecast-card {
+        padding: 1rem;
+    }
+    
+    .forecast-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .favorites-list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+}
+
+/* ==================== Tablet (768px - 1199px) ==================== */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .weather-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .forecast-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .charts-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .charts-section .chart-container:nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==================== Desktop (1200px+) ==================== */
+@media (min-width: 1200px) {
+    .weather-details {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .forecast-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ==================== Touch Devices ==================== */
+@media (hover: none) and (pointer: coarse) {
+    .btn-icon,
+    .btn,
+    .weather-card,
+    .forecast-card {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .search-input,
+    .setting-select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* ==================== Print Media ==================== */
+@media print {
+    .header,
+    .footer,
+    .btn-icon,
+    .modal,
+    .settings-section {
+        display: none;
+    }
+    
+    .main-content {
+        max-width: 100%;
+    }
+    
+    .weather-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ==================== Dark Mode Adjustments ==================== */
+@media (prefers-color-scheme: dark) {
+    body {
+        --bg-primary: var(--dark-bg);
+        --bg-card: var(--dark-card);
+        --text-primary: var(--dark-text);
+        --text-secondary: #adb5bd;
+        --border-color: var(--dark-border);
+    }
+}
+
+/* ==================== High Contrast ==================== */
+@media (prefers-contrast: more) {
+    :root {
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+    
+    .weather-card,
+    .forecast-card {
+        border-width: 2px;
+    }
+}
+
+/* ==================== Reduced Motion ==================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

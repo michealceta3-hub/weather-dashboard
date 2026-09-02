@@ -1,0 +1,71 @@
+/* ==================== Light Theme ==================== */
+.light-mode {
+    --bg-primary: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+}
+
+/* ==================== Dark Theme ==================== */
+.dark-mode {
+    --bg-primary: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #495057;
+}
+
+/* ==================== Theme-Specific Elements ==================== */
+.light-mode .search-input {
+    background: rgba(255, 255, 255, 0.9);
+    color: #212529;
+}
+
+.dark-mode .search-input {
+    background: #404040;
+    color: #e9ecef;
+}
+
+.light-mode .suggestions {
+    background: #ffffff;
+    color: #212529;
+}
+
+.dark-mode .suggestions {
+    background: #2d2d2d;
+    color: #e9ecef;
+}
+
+.light-mode .detail-item {
+    background: #f0f0f0;
+}
+
+.dark-mode .detail-item {
+    background: #1a1a1a;
+}
+
+/* ==================== Header Gradient Adjustments ==================== */
+.dark-mode .header {
+    background: linear-gradient(135deg, #0056b3, #003d7a);
+}
+
+/* ==================== Modal Theme Adjustments ==================== */
+.light-mode .modal {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .modal {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* ==================== Chart Colors ==================== */
+.light-mode .chart-container {
+    --chart-line-color: #007bff;
+    --chart-bg-color: rgba(0, 123, 255, 0.1);
+}
+
+.dark-mode .chart-container {
+    --chart-line-color: #4a9eff;
+    --chart-bg-color: rgba(74, 158, 255, 0.2);
+}
